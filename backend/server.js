@@ -70,7 +70,7 @@ app.delete("/api/booking/:id", async (req, res) => {
   const { id } = req.params;
   try {
     await Reservation.findByIdAndDelete(id);
-    res.status(200).json({ success: true, message: "Product deleted" });
+    res.status(200).json({ success: true, message: "Booking Slot deleted" });
   } catch (error) {
     console.log("error in deleting products:", error.message);
     res.status(500).json({ success: false, message: "Server Error" });
